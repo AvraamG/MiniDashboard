@@ -1,4 +1,3 @@
-# Function to fetch a random quote from the ZenQuotes API
 def fetch_random_quote():
     import requests
     try:

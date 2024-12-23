@@ -1,5 +1,4 @@
 import tkinter as tk
-
 import QuotesAPI
 from Google import get_traffic_info
 from Weather import get_weather
@@ -13,9 +12,11 @@ def update_quote(label):
 
     # Schedule the next update after x ms
     label.after(50000, update_quote, label)
+
 # Main Application
 def main():
-    # Fetch data
+    #TODO move the UI construction to a separate file
+    #TODO split those to unique lines for better readability
     current_temp, tomorrow_forecast, tomorrow_max, tomorrow_min = get_weather()
     duration, duration_in_traffic = get_traffic_info()
 
@@ -73,7 +74,6 @@ def main():
     update_quote(quote_label)
 
     root.mainloop()
-
 
 if __name__ == "__main__":
     main()
